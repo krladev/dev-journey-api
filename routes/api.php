@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// TODO: Protect routes with JWT
+Route::get('skills', 'App\Http\Controllers\SkillsController@list');
+Route::get('skills/{id}', 'App\Http\Controllers\SkillsController@getById');
